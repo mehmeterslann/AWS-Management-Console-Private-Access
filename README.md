@@ -13,9 +13,9 @@ Required Tools:
 
 
 
-## Places to be edited
-## We can configure aws and arrange the parts in the private-console.ts file under the bin file according to our own configurations.
-### 
+Places to be edited
+We can configure aws and arrange the parts in the private-console.ts file under the bin file according to our own configurations.
+ 
 ```bash
 let region:string= ""; #The region where the cdk will be deployed must contain regions supported by AWS manage private console access. AWS DOC: https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/console-private-access.html
 let CompanyName:string= "";   
@@ -33,8 +33,8 @@ const vpcTest = new network.VPC(app, 'VPC', {
 
 ```
 
-## PrivateAccess-policy must be attached after the cdk is deployed on users to restrict public access.
-## In the openvpn server, the client.ovpn was created ready under the /root directory, you can connect to the server via ssm and get the ovpn file and establish a connection
+PrivateAccess-policy must be attached after the cdk is deployed on users to restrict public access.
+In the openvpn server, the client.ovpn was created ready under the /root directory, you can connect to the server via ssm and get the ovpn file and establish a connection
 
 
 ## Bootstrap
