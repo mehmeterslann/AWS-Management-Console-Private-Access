@@ -12,10 +12,10 @@ import * as iam from '../lib/iam';
 export const app = new cdk.App();
 
 
-let region:string= "eu-west-1";
-let CompanyName:string= "company";
-let whichEnv:string= "staging";
-let accountid:string="507012062575";
+let region:string= "";
+let CompanyName:string= "";
+let whichEnv:string= "";
+let accountid:string="";
 
 // VPC - 
 const vpcTest = new network.VPC(app, 'VPC', {
