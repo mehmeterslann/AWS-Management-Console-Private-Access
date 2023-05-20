@@ -9,7 +9,7 @@
 Required Tools: 
 - [CDK](https://docs.aws.amazon.com/cdk/api/v2/) = 2.64.0
 - [Node](https://nodejs.org/en/download/) = v19.4.0
-- [Npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) = 9.2.*
+- [Npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) = 9.2.0
 
 
 
