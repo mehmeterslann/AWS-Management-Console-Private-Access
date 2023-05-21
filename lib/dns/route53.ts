@@ -46,12 +46,12 @@ export class Route53 extends Stack {
         target: route53.RecordTarget.fromAlias(new targets.InterfaceVpcEndpointTarget(props.consoleVpcEndpoint)),
     });
 
-    new route53.ARecord(this, 'GlobalConsoleRecord', {
+    new route53.ARecord(this, 'S3ConsoleRecord', {
         zone: consoleHostedZone,
         target: route53.RecordTarget.fromAlias(new targets.InterfaceVpcEndpointTarget(props.consoleVpcEndpoint)),
         recordName: "s3"
     });
-    new route53.ARecord(this, 'S3ConsoleRecord', {
+    new route53.ARecord(this, 'GlobalConsoleRecord', {
         zone: consoleHostedZone,
         target: route53.RecordTarget.fromAlias(new targets.InterfaceVpcEndpointTarget(props.consoleVpcEndpoint)),
         recordName: "global"
