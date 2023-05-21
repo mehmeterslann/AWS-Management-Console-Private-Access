@@ -43,8 +43,12 @@ In the openvpn server, the client.ovpn was created ready under the /root directo
 
 ## Build Command
 
-* `npm run private-console diff "*"` 
+* `npm install` 
 
+
+## Resource check
+
+* `npm run private-console diff "*"` 
 
 ## Deploy Command
 

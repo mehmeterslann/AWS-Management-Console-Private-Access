@@ -35,6 +35,7 @@ export class VpcEndpoint extends Stack {
                 subnetGroupName: props.company + "-" + props.whichEnv + '-private-database'
             },
             securityGroups: [securityGroup],
+            privateDnsEnabled: true
         });
         this.consoleendpoint.addToPolicy( new iam.PolicyStatement({
             effect: iam.Effect.ALLOW,
@@ -43,7 +44,7 @@ export class VpcEndpoint extends Stack {
             resources: ['*'],
             conditions: {
               'StringEquals': {
-                'aws:PrincipalAccount': [props.accoundid]
+                'aws:PrincipalAccount': props.accoundid,
               }
             }
           }))
@@ -54,6 +55,7 @@ export class VpcEndpoint extends Stack {
                 subnetGroupName: props.company + "-" + props.whichEnv + '-private-generic'
             },
             securityGroups: [securityGroup],
+            privateDnsEnabled: true
         });
 
         this.signinendpoint.addToPolicy( new iam.PolicyStatement({
@@ -63,7 +65,7 @@ export class VpcEndpoint extends Stack {
             resources: ['*'],
             conditions: {
               'StringEquals': {
-                'aws:PrincipalAccount':[props.accoundid]
+                'aws:PrincipalAccount': props.accoundid,
               }
             }
           }));
